@@ -1,0 +1,10 @@
+﻿
+@{
+	string errorMessage = ViewBag.ErrorMessage;
+	ViewData["Title"] = $"Error: {errorMessage}";
+}
+
+<h3 class="text-danger">
+	@errorMessage
+</h3>
+

@@ -1,0 +1,25 @@
+﻿
+@{
+	ViewData["Title"] = "AES Encrypt";
+}
+
+<h3>AES Encrypt</h3>
+<div class="row">
+	<div class="col-md-5">
+		<form asp-action="Encrypt">
+			<div class="form-group">
+				<label>Plain Text</label>
+				<input type="text" class="form-control" placeholder="Enter your plain text" required name="plainText" />
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Encrypt</button>
+			</div>
+		</form>
+		@if (!string.IsNullOrEmpty(ViewBag.Result))
+		{
+			<div>
+				<p>Result: @ViewBag.Result</p>
+			</div>
+		}
+	</div>
+</div>
